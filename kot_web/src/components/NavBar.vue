@@ -17,7 +17,7 @@
                 <router-link :class="route_name=='space_index' ? 'navbar-brand' : 'nav-link'" aria-current="page" :to="{name:'space_index'}">动态空间</router-link>
               </li>
             </ul>
-            <ul class="navbar-nav" v-if="$store.state.user.is_login">
+            <ul class="navbar-nav" v-if="$store.state.user.token">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       {{ $store.state.user.username }}
@@ -31,7 +31,7 @@
               </ul>
 
             
-            <ul class="navbar-nav" v-else>
+            <ul class="navbar-nav" v-else-if="!$store.state.user.pulling_info">
                 <li class="nav-item ">
                     <router-link class="nav-link " :to="{name:'user_account_login'}" role="button">
                       登录

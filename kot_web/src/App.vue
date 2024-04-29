@@ -17,21 +17,7 @@ export default {
   setup(){
 
    
-    // $.ajax({
-    //   url:"http://localhost:3000/user/account/register/",
-    //   type:"post",
-    //   data:{
-    //     username:"400lux",
-    //     password:"123",
-    //     confirmedPassword:"123",
-    //   },
-    //   success(resp){
-    //     console.log(resp);
-    //   },
-    //   error(resp){
-    //     console.log(resp);
-    //   },
-    // })
+    
 
   },
 
