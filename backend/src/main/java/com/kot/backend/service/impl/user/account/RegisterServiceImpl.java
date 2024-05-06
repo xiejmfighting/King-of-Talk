@@ -62,8 +62,9 @@ public class RegisterServiceImpl implements RegisterService {
             return map;
         }
         String encodedPassword=passwordEncoder.encode(password);
+        String sign="这个人很懒，什么都没有留下~";
         String photo="https://avatars.githubusercontent.com/u/145442736?v=4";
-        User user=new User(null,username,encodedPassword,photo);
+        User user=new User(null,username,encodedPassword,photo,sign);
         userMapper.insert(user);
         map.put("error_message","success");
         return map;

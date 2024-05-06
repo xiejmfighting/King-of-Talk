@@ -7,6 +7,8 @@ import UserListView from '../views/userlist/UserListView.vue'
 import UserAccountLogin from '../views/user/account/UserAccountLogin.vue'
 import UserAccountRegister from '../views/user/account/UserAccountRegister.vue'
 import store from '../store/index'
+import UserProfile from '../views/space/UserProfile.vue'
+import SearchContent from '../views/search/SearchContent.vue'
 
 
 const routes = [
@@ -22,6 +24,22 @@ const routes = [
     path: "/pk/",
     name: "pk_index",
     component: PkIndexView,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/userprofile/:userId/",
+    name: "userprofile",
+    component: UserProfile,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/search/:keyword",
+    name: "search_content",
+    component: SearchContent,
     meta: {
       requestAuth: true,
     }

@@ -6,6 +6,7 @@ export default {
         id: "",
         username: "",
         photo: "",
+        sign: "",
         token: "",
         is_login: false,
         pulling_info: true,//是否正在拉取信息
@@ -16,6 +17,7 @@ export default {
             state.username = user.username;
             state.photo = user.photo;
             state.is_login = user.is_login;
+            state.sign = user.sign;
         },
         updateToken(state, token) {
             state.token = token;
@@ -26,6 +28,7 @@ export default {
             state.photo = "";
             state.token = "";
             state.is_login = false;
+            state.sign = "";
         },
         updatePullinginfo(state, pulling_info) {
             state.pulling_info = pulling_info;
